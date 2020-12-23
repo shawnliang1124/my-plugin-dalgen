@@ -1,0 +1,19 @@
+package ${package.Repository};
+
+import ${package.Entity}.${table.doName};
+import ${package.Mapper}.${table.mapperName};
+import ${superServiceImplClassPackage};
+import org.springframework.stereotype.Repository;
+
+/**
+ * <p>
+ * ${table.comment}  服务实现类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+@Repository
+public class ${table.serviceImplName} extends ${superServiceImplClass}<${table.mapperName}, ${table.doName}> {
+	
+}

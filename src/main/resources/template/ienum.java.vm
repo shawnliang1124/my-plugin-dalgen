@@ -1,0 +1,40 @@
+package ${package.Enum};
+
+#if(${table.hasEnum})
+import ${superEnumClassPackage};
+import java.io.Serializable;
+#end
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+/**
+ * <p>
+ * ${table.comment}枚举
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public class ${table.enumName} {
+#foreach($field in ${table.fields})
+#if(${field.isEnum})
+#if("$!field.comment" != "")
+    /**
+     * ${field.comment}
+     */
+#end
+    @Getter
+    @AllArgsConstructor
+    public enum ${field.propertyClassName} implements IEnum {
+        EXAMPLE("");
+
+        String desc;
+
+        @Override
+        public Serializable getValue() {
+            return name();
+        }
+    }
+#end
+#end
+}

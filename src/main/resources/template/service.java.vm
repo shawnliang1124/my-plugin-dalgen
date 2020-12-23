@@ -1,0 +1,16 @@
+package ${package.Repository};
+
+import ${package.Entity}.${table.doName};
+import ${superServiceClassPackage};
+
+/**
+ * <p>
+ * 服务类
+ * </p>
+ *
+ * @author ${author}
+ * @since ${date}
+ */
+public interface ${table.serviceName} extends ${superServiceClass}<${table.doName}> {
+	
+}
